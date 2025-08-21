@@ -1,0 +1,288 @@
+﻿@charset "utf-8";
+
+body {
+    margin: 0;
+    background-image: url(images/背景.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* 🔒背景を固定 */
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: #444;
+
+  }
+
+header{
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+     background: none;
+    z-index: 100;
+    text-align: center;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;             /* 横並びにする */
+    align-items: center;       /* 垂直方向に中央揃え */
+    justify-content: space-between; /* 両端に配置（必要に応じて） */
+    padding: 20px;
+    background-color: #ffffff;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .nav {
+    display: flex;     /* 横並びにする！ */
+    list-style: none;  /* デフォルトのポチ（●）を消す */
+    gap: 20px;         /* メニュー間のスペース */
+    padding: 0 40px; /* 左右に40pxずつ余白を追加 */
+    margin: 0;
+  }
+ .nav li a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+
+  }
+.nav li a:hover {
+  background-color: rgba(255, 255, 255, 0.6); /* 優しい白の透け感 */
+  transform: scale(1.05); /* 少しだけ拡大して “ぷるっ” とする */
+}
+.nav li a img {
+transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.nav li a:hover img {
+  transform: scale(1.03);
+  opacity: 0.85;
+}
+.nav li a img:active {
+  transform: scale(0.94);
+  opacity: 0.6;
+  /*animation: squish 0.4s ease forwards;*/
+
+}
+@keyframes squish {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.92, 0.95);
+  }
+  60% {
+    transform: scale(1.05, 1.04);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#content{
+	position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  z-index: 1;
+	font-family: 'Zen Maru Gothic', sans-serif;
+  height: calc(100vh - 100px); /* 全画面 - ヘッダーの高さ */
+  padding: 20px;
+  border-radius: 8px;
+  
+}
+
+  #content h1{
+	  opacity: 0;
+	  animation: fadeIn 2s ease-in forwards;
+	  position: relative;
+    z-index: 2;
+    line-height: 1.6;
+    margin: 10px;
+	  font-family: Mochiy Pop One;
+  }
+  
+  @keyframes fadeIn {
+	to { opacity: 1; }
+  }
+.main-wrapper {
+	padding-top: 100px; /* ヘッダーの高さ分 */
+	padding: 20px;
+	background: rgba(255, 255, 255, 0.6); /* ふんわり白背景 */
+	border-radius: 8px;
+  scrollbar-width: none; /* スクロールバーの幅をゼロに */
+  scrollbar-color: transparent transparent; /* 色も透明に */
+
+}
+section {
+  text-align: center;      /* ✅ テキストを中央に */
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* ✅ 中身の要素を中央揃えに */
+  padding: 40px 20px;
+  scroll-margin-top: 140px; /* ヘッダーの高さに合わせて調整 */
+
+}
+.soft-section{
+  background-color: rgba(255, 255, 255, 0.8); /* ほんのり白背景（ふんわり透け感） */
+  border-radius: 16px;                        /* 角を柔らかく丸める */
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05); /* 優しい影で浮かせる */
+  text-align: center;
+  scroll-margin-top: 140px;
+  display: flex;
+  flex-wrap: wrap;       /* 必要なら折り返しもOK */
+  gap: 16px;              /* 要素同士のすき間にやさしさを */
+  align-items: center;    /* 高さが揃って整った印象に */
+  justify-content: center;/* 中央寄せでふんわり配置 */
+
+}
+.soft-section div {
+  margin: 0;              /* pタグの余白を一旦リセット */
+}
+
+.soft-section img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+.soft-section ul {
+  padding-left: 1.5em; /* 箇条書きの点から本文までの余白 */
+  text-align: left;    /* 左寄せ */
+  list-style-position: outside; /* 点を外側に */
+}
+
+.soft-section li {
+  margin-bottom: 0.5em; /* 項目ごとの余白で読みやすく */
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #d93b30; /* お好みで背景色を */
+  color: #ffffff; /* テキストの色も調整可能 */
+}
+/* 以下はvisually-hiddenの表示をなくす記述 */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu li {
+  margin-bottom: 1em;
+}
+
+.side-menu a {
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.side-menu a:hover {
+  color: #7b9acc;
+  transform: scale(1.05);
+}
+.side-menu {
+  position: fixed;
+  top: 120px;
+  right: 30px;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(200, 200, 200, 0.4);
+  z-index: 999;
+  font-family: 'Mochiy Pop One', sans-serif;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+
+.side-menu.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.work-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* 画像と文章の間隔 */
+  flex-wrap: wrap; /* 画面が狭いときは折り返し */
+  justify-content: center;
+}
+
+.work-content img {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.work-text {
+  max-width: 550px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.thumbnail {
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.left{
+  padding-left: 1.5em; /* 箇条書きの点から本文までの余白 */
+  text-align: left;    /* 左寄せ */  
+}
+
+#profile a img:hover,#work a img:hover,#contact a img:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease; /* (オプション) アニメーションを滑らかにする */
+}

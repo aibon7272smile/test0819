@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<title>ポートフォリオサイト</title>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+<div class="header">
+<div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt="ポートフォリオサイト" width="50" height="50"></a>
+</div>
+    
+<nav class="nav">
+<ul class="nav">
+<li><a href="#profile"><img src="images/botan1.png" width="180" height="40" alt="プロフィール"><span class="visually-hidden">プロフィールへ移動</span>
+</a></li>
+<li><a href="#work"><img src="images/botan2.png" width="180" height="40" alt="作品集"><span class="visually-hidden">作品集へ移動</span></a></li>
+<li><a href="#contact"><img src="images/botan3.png" width="180" height="40" alt="お問い合わせ"><span class="visually-hidden">お問い合わせへ移動</span></a></li>
+</ul>
+</nav>
+</div>
+
+</header>
+<div class="main-wrapper">
+
+<div id="content">
+<h1>職業訓練生のポートフォリオサイト</h1>
+<h1>～WEBクリエイター科で学んだこと～</h1>
+</div>
+<section class="soft-section" id=profile>
+    <h2>わたしのこと</h2>
+    <img src="images/profile_photo2.JPEG" alt="イメージ画像" width="150px" height="150px">
+    <p>田中　愛唯（たなか　あい）</p>
+    <p>小さいころから絵を描くのが好きでした。<br>
+      仕事を辞めたことをきっかけに職業訓練校のWebクリエイター科２に応募。<br>
+      ２０２５年３月～８月の６か月間、Webに関するスキルを学びました。</p>
+      <p><a href="profile.html"><img src="images/botan4.png" width="180" height="40" alt="もっとみる"><span class="visually-hidden">プロフィールへ移動</span>
+</a></p>
+</section>
+<section class="soft-section" id="work">
+  <h2>作品紹介</h2>
+
+  <div class="work-content">
+    <img src="images/imadokisite top.jpeg" width="200" height="100" alt="サイトスクショ">
+
+    <div class="work-text">
+      <p>左のWEBサイトは、はじめてHTMLとCSSで制作したものの一部です。</p>
+      
+    </div>
+  </div>
+  <p><a href="work.html">
+        <img src="images/botan4.png" width="180" height="40" alt="もっとみる">
+        <span class="visually-hidden">プロフィールへ移動</span>
+      </a></p>
+</section>
+
+<section class="soft-section" id=contact>
+    <h2>お問い合わせ</h2>
+    <p>下記のボタンからお気軽にご連絡ください。</p>
+    <p><a href="contact.html"><img src="images/botan4.png" width="180" height="40" alt="もっとみる"><span class="visually-hidden">プロフィールへ移動</span></a></p>
+
+</section>
+
+</div>
+<footer>
+<p>
+<small>© 2025 職業訓練生のポートフォリオサイト</small>
+</p>
+</footer>
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+
+</body>
+
+
+
+
+</html>
