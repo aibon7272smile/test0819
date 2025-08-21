@@ -16,36 +16,133 @@
     
 <nav class="nav">
 <ul class="nav">
-<li><a href="#profile"><img src="images/botan1.png" width="180" height="40" alt="プロフィール"><span class="visually-hidden">プロフィールへ移動</span>
+<li><a href="profile.html"><img src="images/botan1.png" width="180" height="40" alt="プロフィール"><span class="visually-hidden">プロフィールへ移動</span>
 </a></li>
-<li><a href="#work"><img src="images/botan2.png" width="180" height="40" alt="作品集"><span class="visually-hidden">作品集へ移動</span></a></li>
-<li><a href="#contact"><img src="images/botan3.png" width="180" height="40" alt="お問い合わせ"><span class="visually-hidden">お問い合わせへ移動</span></a></li>
+<li><a href="work.html"><img src="images/botan2.png" width="180" height="40" alt="作品集"><span class="visually-hidden">作品集へ移動</span></a></li>
+<li><a href="contact.html"><img src="images/botan3.png" width="180" height="40" alt="お問い合わせ"><span class="visually-hidden">お問い合わせへ移動</span></a></li>
 </ul>
 </nav>
 </div>
 
 </header>
+
+<nav class="side-menu">
+  <ul>
+    <li>＜目次＞</li>
+    <li><a href="#site">WEBサイト<br>（HTML,CSS）</a></li>
+    <li><a href="#site2">WEBサイト<br>（Wordpress）</a></li>
+    <li><a href="#bn">バナー<br>（Photoshop）</a></li>
+    <li><a href="#poster">ポスター<br>（Illustrator）</a></li>
+    <li><a href="#movie">動画<br>（Premierepro）</a></li>
+  </ul>
+</nav>
+
 <div class="main-wrapper">
 
 <div id="content">
-<h1>職業訓練生のポートフォリオサイト</h1>
-<h1>～WEBクリエイター科で学んだこと～</h1>
+<h1>作品集</h1>
 </div>
-<section class="soft-section"   id=profile>
-    <h2>わたしのこと</h2>
-    <img src="images/仮顔イラスト_color.png" alt="イメージ画像" width="150px" height="150px">
-    <p>田中　愛唯（たなか　あい）</p>
-    <p>小さいころから絵を描くのが好きでした。<br>
-      仕事を辞めたことをきっかけに職業訓練校のWebクリエイター科２に応募。<br>
-      ２０２５年３月～８月の６か月間、Webに関するスキルを学びました。</p>
+<section class="soft-section"   id=site>
+    <h2>WEBサイト（HTML,CSS）</h2>
+  <div class="work-content">
+    <img src="images/imadokisite top.jpeg" width="200" height="100" alt="toppage"  class="thumbnail" onclick="openModal(this)">
+    <img src="images/imadokisite.access.jpeg" width="200" height="100" alt="accesspage"  class="thumbnail" onclick="openModal(this)">
+    <img src="images/imadokisite.categor.jpeg" width="200" height="100" alt="categorpage"  class="thumbnail" onclick="openModal(this)">
+    <img src="images/imadokisite.shop.jpeg" width="200" height="100" alt="shoppage"  class="thumbnail" onclick="openModal(this)">
+  </div>
+<div class="left">    
+      <p>テーマ・・・・・・・アパレル店サイト<br>
+      コンセプト・・・・・２０代社会人女性向けのアパレルショップ<br>
+      ターゲット ・・・・・２０代、女性<br>
+      制作時間・・・・・・８時間<br>
+      ポイント・・・・・・商品カテゴリページで、商品画像と商品タイトルにリンクを貼り、どちらをおしても詳細ページに飛ぶよう設定したこと。<br>
+      難しかったところ・・商品カテゴリページで、商品画像の配列を２列にしたかったができなかった。<br>
+      よかったところ ・・・サイト全体の色を統一したことでまとまりがでた。<br>
+      課題 ・・・・・・・・授業で学んだ、画像のまわりこみ設定が難しかった。学んだ方法以外でもできるようなのでいろんなパターンで実装していきたい。<br>
+      感想・・・・・・・たくさん試行錯誤し、学んだことと、これから調べて知っていくことをどんどん吸収して、これ以上に実用的なサイトが作れるようになりたいと思った。<br></p>
+</div>    
+
+<div id="modal" class="modal" onclick="closeModal()">
+  <img id="modal-img" class="modal-content" alt="拡大画像">
+</div>
+
 </section>
-<section class="soft-section" id=work>
-    <h2>作品紹介</h2>
-    <p>ここに動画・ポスター・バナーなどの内容を載せます</p>
+
+<section class="soft-section"   id=site2>
+    <h2>WEBサイト（Wordpress）</h2>
+  <div class="work-content">
+    <img src="images/top(wp).jpeg" width="200" height="100" alt="accesspage"  class="thumbnail" onclick="openModal(this)">
+    <img src="images/profile(wp).jpeg" width="200" height="100" alt="toppage"  class="thumbnail" onclick="openModal(this)">
+    <img src="images/contact(wp).jpeg" width="200" height="100" alt="categorpage"  class="thumbnail" onclick="openModal(this)">
+    <img src="images/store(wp).jpeg" width="200" height="100" alt="shoppage"  class="thumbnail" onclick="openModal(this)">
+    <img src="images/dl(wp).jpeg" width="200" height="100" alt="shoppage"  class="thumbnail" onclick="openModal(this)">
+    <img src="images/free material(wp).jpeg" width="200" height="100" alt="shoppage"  class="thumbnail" onclick="openModal(this)">
+
+  </div>
+<div class="left">    
+      <p>テーマ：アパレル店サイト</p>
+      <p>コンセプト：２０代社会人女性向けのアパレルショップ</p>
+      <p>ターゲット ：２０代、女性</p>
+      <p>制作時間：８時間</p>
+      <p>ポイント：商品カテゴリページで、商品画像と商品タイトルにリンクを貼り、どちらをおしても詳細ページに飛ぶよう設定したこと。</p>
+      <p>難しかったところ：商品カテゴリページで、商品画像の配列を２列にしたかったができなかった。</p>
+      <p>よかったところ：サイト全体の色を統一したことでまとまりがでた。</p>
+      <p>課題：授業で学んだ、画像のまわりこみ設定が難しかった。学んだ方法以外でもできるようなのでいろんなパターンで実装していきたい。</p>
+      <p>感想：たくさん試行錯誤し、学んだことと、これから調べて知っていくことをどんどん吸収して、これ以上に実用的なサイトが作れるようになりたいと思った。<br></p>
+</div>       
+
+<div id="modal" class="modal" onclick="closeModal()">
+  <img id="modal-img" class="modal-content" alt="拡大画像">
+</div>
+
 </section>
-<section class="soft-section" id=contact>
-    <h2>お問い合わせ</h2>
-    <p>下記のメールアドレスにお気軽にご連絡ください。</p>
+
+<section class="soft-section" id=bn>
+    <h2>バナー（Photoshop）</h2>
+    
+    <img src="images/Insutaguramu.bn.jpg" width="200" height="100" alt="バナー" class="thumbnail" onclick="openModal(this)">
+
+<div class="left">   
+      <p>テーマ：晴れ雨兼用ショートブーツのご紹介</p>
+      <p>テーマを選んだ理由：「働くあなたの足元に。」というフレーズを考え、 天気に左右されずにおしゃれしたい！機能性も重視したい！！ そんな人にピッタリのレインブーツを紹介したいと思いテーマを選びました。</p>
+      <p>難しかったところ：商品画像を切り取るとき影の部分を切り取りたかったのですが、うまくできなかったのでそのままにしてしまいました。<br>
+また、無地の背景に柄を入れたかったのでシェイプ機能で花の形を入れたのですが、操作が悪いのか花を移動させることができなかったので、花柄の配置が難しかったです。
+インスタグラムに掲載する作品の作成だったため、一目で何についてのバナーなのかわかるようにするにはどうすればいいか考えるのも難しいと思いました。</p>
+      <p>良かったところ：何についてのバナーなのか、商品をど真ん中におくことで、流し見するユーザー等にもわかりやすい商品配置ができたと思います。見た目で商品を良いなと思ってくれたユーザーは少しバナーに留まってくれると思うので、1枚で商品情報がわかるように機能性・カラーバリエーション・販売期間・値段を掲載し、目が疲れない程度のフォントカラーを使ったのがいい点だと思います。</p>
+      <p>改善点：時間があれば画像を正確に切り取りするコツをつかめるように練習したいです。<br>
+また、画像を配置する際、比率等を調整して思い描くような配置ができるようになる必要があると思いました。
+他、バナーに掲載する情報に関して、ユーザーの立場になって考える力がもっと必要だと思いました。
+最後に、フォントの種類や色、配置についても、もっと目に留まりやすくできたのではないかと思いました。</p>
+      <p>感想：テーマから考えるのが難しかったです。デザインについてはフォトショップで作ってみると少しづつ考えたデザインに近づけていけたので楽しかったです。自分の力でできることがこれからもっと増えていけばもっと作品作りが楽しくなると思いました。ただ、クライアントからの依頼があった際、それを形にできるのか、そもそも依頼を理解し形にすることができるのかまだまだ不安はありますが、少し知識が身について嬉しかったです。</p>
+</div> 
+
+
+</section>
+<section class="soft-section" id=poster>
+    <h2>ポスター（Illustrator）</h2>
+    <div class="work-content">
+    <img src="images/poster1.jpg" width="200" height="100" alt="ポスター" class="thumbnail" onclick="openModal(this)">
+    <img src="images/poster2.jpg" width="200" height="100" alt="ポスター" class="thumbnail" onclick="openModal(this)">    
+    <div class="work-text">
+      <p>練習で「ハロートレーニングフェス2024」のポスターチラシを<br>制作しました。</p>
+      
+    </div>
+  </div>
+
+</section>
+
+<section class="soft-section" id=movie>
+    <h2>動画（Premierepro）</h2>
+<video controls  width="640" height="360">
+  <source src="images/CM.mp4" type="video/mp4">
+  お使いのブラウザはこの動画を再生できません。
+</video>ターゲット：結婚指輪の購入を検討している人
+<p>テーマ：指輪専門店のCM</p>
+<p>PR:フリー素材のイラストに動きをつけて目をひくようにしました。</p>
+<p>難しかったところ：アニメーションの設定をするとき、思い描くタイミングで動きがつくよう設定すること。</p>
+<p>感想：初めての動画づくりだったので、プレミアプロの機能にどんなものがあるのか把握しきれなかったです。</p>
+<p></p>
+<p></p>
 </section>
 
 </div>
@@ -64,8 +161,31 @@
       }
     });
   });
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
+    const menu = document.querySelector(".side-menu");
+
+    if (scrollY > 500) { // ← 表示したい位置の高さ（px）を調整できる！
+      menu.classList.add("visible");
+    } else {
+      menu.classList.remove("visible");
+    }
+  });
+  
+  function openModal(img) {
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    modal.style.display = "flex";
+    modalImg.src = img.src;
+  }
+
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
 </script>
 
+</body>
 
 </body>
 

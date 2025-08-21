@@ -116,8 +116,6 @@ transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
   }
 .main-wrapper {
 	padding-top: 100px; /* ヘッダーの高さ分 */
-	height: calc(100vh - 100px); /* 全画面 - ヘッダーの高さ */
-	overflow-y: auto; /* 垂直スクロール */
 	padding: 20px;
 	background: rgba(255, 255, 255, 0.6); /* ふんわり白背景 */
 	border-radius: 8px;
@@ -225,4 +223,66 @@ footer {
 .side-menu.visible {
   opacity: 1;
   pointer-events: auto;
+}
+
+.work-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* 画像と文章の間隔 */
+  flex-wrap: wrap; /* 画面が狭いときは折り返し */
+  justify-content: center;
+}
+
+.work-content img {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.work-text {
+  max-width: 550px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.thumbnail {
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.left{
+  padding-left: 1.5em; /* 箇条書きの点から本文までの余白 */
+  text-align: left;    /* 左寄せ */  
+}
+
+#profile a img:hover,#work a img:hover,#contact a img:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease; /* (オプション) アニメーションを滑らかにする */
 }
