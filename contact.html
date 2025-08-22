@@ -11,7 +11,7 @@
 <header>
 <div class="header">
 <div class="logo">
-    <a href="index.html"><img src="images/logo.png" alt="ポートフォリオサイト" width="50" height="50"></a>
+    <a href="index.html"  class="logo-link"><img src="images/logo.png" alt="ポートフォリオサイト" width="50" height="50"  class="logo-img"></a>
 </div>
     
 <nav class="nav">
@@ -73,6 +73,22 @@
       menu.classList.remove("visible");
     }
   });
+
+  document.getElementById('logo-link').addEventListener('click', function(e) {
+  // ページ遷移を一時的に停止
+  e.preventDefault();
+
+  const link = this;
+  const logoImg = link.querySelector('.logo-img');
+  
+  // ロゴ画像に.activeクラスを追加して切り替え
+  logoImg.classList.add('active');
+
+  // 100ミリ秒後にページ遷移を実行
+  setTimeout(function() {
+    window.location.href = link.href;
+  }, 200); // ここで遅延時間を調整します
+});
 
 </script>
 

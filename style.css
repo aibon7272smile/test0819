@@ -11,16 +11,6 @@ body {
 
   }
 
-header{
-	position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-     background: none;
-    z-index: 100;
-    text-align: center;
-}
 .header {
     position: fixed;
     top: 0;
@@ -31,11 +21,18 @@ header{
     justify-content: space-between; /* 両端に配置（必要に応じて） */
     padding: 20px;
     background-color: #ffffff;
+    z-index: 100;    
   }
 
-  .logo {
-    width: 150px;
-  }
+.logo-img {
+  content: url("images/logo.png");
+  transition: transform 0.2s, content 0.2s;
+}
+
+.logo-link:active .logo-img {
+  content: url("images/logo2.png");
+  transform: scale(1.05);
+}
 
   .nav {
     display: flex;     /* 横並びにする！ */
@@ -53,16 +50,18 @@ header{
   }
 .nav li a:hover {
   background-color: rgba(255, 255, 255, 0.6); /* 優しい白の透け感 */
-  transform: scale(1.05); /* 少しだけ拡大して “ぷるっ” とする */
 }
 .nav li a img {
 transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 
-.nav li a:hover img {
-  transform: scale(1.03);
-  opacity: 0.85;
+.nav li a:hover img,#profile a img:hover,
+#work a img:hover,
+#contact a img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
+
 .nav li a img:active {
   transform: scale(0.94);
   opacity: 0.6;
